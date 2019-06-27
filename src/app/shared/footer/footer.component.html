@@ -11,7 +11,7 @@
       </ul>
       <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}} Jorge Luis </span>All Right Reserved.</p>
     </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+    <div *ngIf="_servicio.info" class="ae-grid__item item-lg-4 au-xs-ta-center">
       <a target="_blank" [href]="_servicio.info.facebook" class="rk-social-btn ">
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
@@ -36,7 +36,7 @@
     <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
       <p class="rk-footer__text rk-footer__contact ">
         <span class="ae-u-bold">Email: </span>
-        <span class="ae-u-bolder"> 
+        <span *ngIf="_servicio.info" class="ae-u-bolder"> 
           <a href="mailTo:{{_servicio.info.email}}" class="rk-dark-color ">{{ _servicio.info.email }} </a>
         </span>
       </p>
